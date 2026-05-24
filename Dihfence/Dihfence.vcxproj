@@ -24,6 +24,7 @@
     <ProjectGuid>{3a6091d7-9895-4eb2-8d07-cdb4c05892f9}</ProjectGuid>
     <RootNamespace>Dihfence</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>C.A.S.T.L.E</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
