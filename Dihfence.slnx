@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Dihfence/Dihfence.vcxproj" Id="3a6091d7-9895-4eb2-8d07-cdb4c05892f9" />
+</Solution>
