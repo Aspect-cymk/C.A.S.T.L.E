@@ -1,0 +1,32 @@
+#include <opencv2/opencv.hpp>
+#include <iostream>
+
+int main() {
+    cv::VideoCapture cap(2, cv::CAP_DSHOW); 
+    if (!cap.isOpened()) {
+        cap.open(0, cv::CAP_DSHOW);         
+        if (!cap.isOpened()) {
+            std::cerr << "Cannot open camera\n";
+            return -1;
+        }
+    }
+
+    cap.set(cv::CAP_PROP_FRAME_WIDTH, 640);
+    cap.set(cv::CAP_PROP_FRAME_HEIGHT, 480);
+
+    cv::Mat frame;
+    cv::namedWindow("UAV LIVE FEED", cv::WINDOW_NORMAL);
+
+    while (true) {
+        cap >> frame;
+        if (frame.empty()) break;
+
+        cv::imshow("UAV LIVE FEED", frame);
+
+        if (cv::waitKey(1) == 27) break; 
+    }
+
+    cap.release();
+    cv::destroyAllWindows();
+    return 0;
+}
